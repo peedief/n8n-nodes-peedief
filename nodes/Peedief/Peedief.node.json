@@ -1,0 +1,14 @@
+{
+  "node": "n8n-nodes-peedief.peedief",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": ["Productivity"],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://peedief.com"
+      }
+    ]
+  },
+  "alias": ["PDF", "HTML to PDF", "Template to PDF", "Document"]
+}

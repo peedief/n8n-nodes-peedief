@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-peedief",
+  "version": "0.1.0",
+  "description": "n8n community node for generating PDFs with Peedief.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "peedief",
+    "pdf",
+    "html-to-pdf",
+    "template-to-pdf"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Peedief"
+  },
+  "homepage": "https://peedief.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peedief/n8n-nodes-peedief"
+  },
+  "main": "dist/nodes/Peedief/Peedief.node.js",
+  "scripts": {
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PeediefApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Peedief/Peedief.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.31.0",
+    "@types/node": "^22.15.21",
+    "eslint": "^9.39.4",
+    "n8n-workflow": "^2.16.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
