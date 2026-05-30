@@ -1,6 +1,6 @@
 {
   "name": "@peedief/n8n-nodes-peedief",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n community node for generating PDFs with Peedief.",
   "keywords": [
     "n8n-community-node-package",
@@ -12,7 +12,9 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Peedief"
+    "name": "Juned Khatri",
+    "email": "juned.khatri31@gmail.com",
+    "url": "https://peedief.com"
   },
   "homepage": "https://peedief.com",
   "repository": {
