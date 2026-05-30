@@ -1,0 +1,42 @@
+# Publishes this n8n community node package to npm on every version tag push.
+#
+# From May 1, 2026, n8n requires verified Creator Portal submissions to be
+# published from GitHub Actions with an npm provenance statement.
+#
+# One-time npm setup:
+# 1. Open the package settings on npmjs.com.
+# 2. Under Publish access > Trusted Publishers, add GitHub Actions.
+# 3. Use repository owner "peedief", repository name "n8n-nodes-peedief",
+#    and workflow filename "publish.yml".
+
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish package
+        run: npm run release
