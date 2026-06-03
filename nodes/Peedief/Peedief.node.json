@@ -1,5 +1,5 @@
 {
-  "node": "n8n-nodes-peedief.peedief",
+  "node": "@peedief/n8n-nodes-peedief.peedief",
   "nodeVersion": "1.0",
   "codexVersion": "1.0",
   "categories": ["Productivity"],
