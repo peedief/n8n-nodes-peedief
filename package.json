@@ -1,6 +1,6 @@
 {
   "name": "@peedief/n8n-nodes-peedief",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "n8n community node for generating PDFs with Peedief.",
   "keywords": [
     "n8n-community-node-package",
