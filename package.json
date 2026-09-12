@@ -31,7 +31,8 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix",
     "release": "n8n-node release",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "test": "npm run build && node --test test/*.test.cjs"
   },
   "files": [
     "dist"
@@ -46,11 +47,11 @@
     ]
   },
   "devDependencies": {
-    "@n8n/node-cli": "^0.31.0",
-    "@types/node": "^22.15.21",
+    "@n8n/node-cli": "^0.47.2",
+    "@types/node": "^22.20.2",
     "eslint": "^9.39.4",
     "n8n-workflow": "^2.16.0",
-    "typescript": "^5.8.3"
+    "typescript": "~6.0.3"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
